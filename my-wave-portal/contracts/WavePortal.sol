@@ -5,7 +5,7 @@ pragma solidity ^0.8.17;
 import "hardhat/console.sol";
 
 contract WavePortal {
-    uint256 totalWaves;
+    uint256 Patents;
 
     constructor() {
         console.log("Let's store a Patent");
