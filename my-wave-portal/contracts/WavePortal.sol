@@ -8,7 +8,7 @@ contract WavePortal {
     uint256 meds;
 
     constructor() {
-        console.log("Let's store a ");
+        console.log("Let's store a chart");
     }
 
     function wave() public {
