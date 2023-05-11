@@ -12,7 +12,7 @@ contract WavePortal {
     }
 
     function wave() public {
-        totalWaves += 1;
+        meds += 1;
         console.log("%s has been logged", msg.sender);
     }
 
