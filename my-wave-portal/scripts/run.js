@@ -11,7 +11,7 @@ const main = async () => {
   /**
    * Let's send a few waves!
    */
-  let waveTxn = await waveContract.wave("A message!");
+  let waveTxn = await waveContract.wave("A chart!");
   await waveTxn.wait(); // Wait for the transaction to be mined
 
   const [_, randomPerson] = await hre.ethers.getSigners();
