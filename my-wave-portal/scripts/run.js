@@ -4,6 +4,32 @@ const main = async () => {
   await waveContract.deployed();
   console.log("Contract addy:", waveContract.address);
 
+  /*
+   * Get Contract balance
+   */
+  let contractBalance = await hre.ethers.provider.getBalance(
+    waveContract.address
+  );
+  console.log(
+    "Contract balance:",
+    hre.ethers.utils.formatEther(contractBalance)
+  );
+
+  /*
+   * Send Wave
+   */
+  let waveTxn = await waveContract.wave("A message!");
+  await waveTxn.wait();
+
+  /*
+   * Get Contract balance to see what happened!
+   */
+  contractBalance = await hre.ethers.provider.getBalance(waveContract.address);
+  console.log(
+    "Contract balance:",
+    hre.ethers.utils.formatEther(contractBalance)
+  );
+
   let waveCount;
   waveCount = await waveContract.getTotalWaves();
   console.log(waveCount.toNumber());
