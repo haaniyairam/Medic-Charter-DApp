@@ -17,7 +17,7 @@ const main = async () => {
   /*
    * Let's try two waves now
    */
-  const waveTxn = await waveContract.wave("This is wave #1");
+  const waveTxn = await waveContract.wave("This is chart #1");
   await waveTxn.wait();
 
   const waveTxn2 = await waveContract.wave("This is wave #2");
