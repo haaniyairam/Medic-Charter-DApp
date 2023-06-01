@@ -38,6 +38,9 @@ const main = async () => {
 constructor() payable {
   console.log("We have been constructed!");
 }
+constructor() payable {
+  console.log("We have been constructed!");
+}
 const runMain = async () => {
   try {
     await main();
