@@ -35,7 +35,9 @@ const main = async () => {
   let allWaves = await waveContract.getAllWaves();
   console.log(allWaves);
 };
-
+constructor() payable {
+  console.log("We have been constructed!");
+}
 const runMain = async () => {
   try {
     await main();
